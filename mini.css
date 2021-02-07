@@ -13,3 +13,82 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+/* Basic Theme */
+/* You will find more in the themes folder in the future*/
+:root {
+  --mini-color-text: #292929;
+  /* Palette from https://colorhunt.co/palette/252860*/
+  --mini-color-primary: #75cfb8;
+  --mini-color-accent: #ffc478;
+  --mini-color-secondary: #bbdfc8;
+  --mini-color-background: #f0e5d8;
+  /* Text */
+  --mini-font-base-size: 100%;
+  --mini-font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Helvetica, Arial, sans-serif;
+  --mini-font-scale: 1.256;
+}
+
+/* Tiny Reset */
+/* TODO(angel): Evaluate if I want to a more complete CSS reset */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Base styles */
+html {
+  font-size: var(--mini-font-base-size);
+  font-family: var(--mini-font-family);
+}
+
+body {
+  background-color: var(--mini-color-background);
+  color: var(--mini-color-text);
+}
+
+/* Layout */
+.content {
+  margin: 1rem;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: .75em 0 .5em;
+}
+
+h1 {
+  font-size: calc(var(--mini-font-scale) * 2.5 * 1em);
+}
+
+h2 {
+  font-size: calc(var(--mini-font-scale) * 2.25 * 1em);
+}
+
+h3 {
+  font-size: calc(var(--mini-font-scale) * 2 * 1em);
+}
+
+h4 {
+  font-size: calc(var(--mini-font-scale) * 1.75 * 1em);
+  font-weight: bold;
+}
+
+h5 {
+  font-size: calc(var(--mini-font-scale) * 1.5 * 1em);
+}
+
+h6 {
+  font-size: calc(var(--mini-font-scale) * 1.25 * 1em);
+}
+
+/* Utilities */

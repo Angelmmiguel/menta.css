@@ -23,13 +23,15 @@
   --mini-color-accent: #ffc478;
   --mini-color-secondary: #bbdfc8;
   --mini-color-background: #f0e5d8;
+  --mini-color-element-background: #ffffff;
   /* Text */
   --mini-font-base-size: 100%;
   --mini-font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen-Sans, Ubuntu, Helvetica, Arial, sans-serif;
   --mini-font-scale: 1.256;
   /* Shapes */
-  --mini-radius: 5px;
+  --mini-border-radius: 5px;
+  --mini-border-size: 3px;
 }
 
 /* Tiny Reset */
@@ -99,8 +101,8 @@ button {
   --mini-t-button-color: var(--mini-color-primary);
   --mini-t-button-shadow: var(--mini-color-text);
   background-color: var(--mini-t-button-color);
-  border: 3px solid var(--mini-t-button-color);
-  border-radius: var(--mini-radius);
+  border: var(--mini-border-size) solid var(--mini-t-button-color);
+  border-radius: var(--mini-border-radius);
   cursor: pointer;
   font-size: 1em;
   position: relative;
@@ -131,6 +133,42 @@ button.accent {
 
 button.outline {
   --mini-t-button-shadow: var(--mini-t-button-color);
-  border: 3px solid var(--mini-t-button-color);
+  border: var(--mini-border-size) solid var(--mini-t-button-color);
   background-color: transparent;
+}
+
+/* Tables */
+table {
+  margin-top: 1rem;
+  border-radius: var(--mini-border-radius);
+  border: var(--mini-border-size) solid var(--mini-color-text);
+  border-spacing: 0;
+}
+
+table td {
+  margin: 0;
+}
+
+table td {
+  padding: 0.5rem;
+  background-color: var(--mini-color-element-background);
+}
+
+table thead td {
+  border-bottom: var(--mini-border-size) solid var(--mini-color-text);
+  font-weight: bold;
+}
+
+table.striped tbody tr:nth-child(even),
+table.full-striped tbody tr:nth-child(even) {
+  filter: brightness(0.95);
+}
+
+table.full-striped tr td:nth-child(even) {
+  filter: brightness(0.95);
+}
+
+table tbody tr:hover td {
+  background-color: var(--mini-color-accent);
+  filter: brightness(1.15);
 }

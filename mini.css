@@ -24,6 +24,7 @@
   --mini-color-secondary: #bbdfc8;
   --mini-color-background: #f0e5d8;
   --mini-color-element-background: #ffffff;
+  --mini-color-border-color: var(--mini-color-text);
   /* Text */
   --mini-font-base-size: 100%;
   --mini-font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
@@ -31,7 +32,9 @@
   --mini-font-scale: 1.256;
   /* Shapes */
   --mini-border-radius: 5px;
-  --mini-border-size: 3px;
+  --mini-border-size: 2px;
+  /* Forms */
+  --mini-input-height: 42px;
 }
 
 /* Tiny Reset */
@@ -133,7 +136,7 @@ button.accent {
 
 button.outline {
   --mini-t-button-shadow: var(--mini-t-button-color);
-  border: var(--mini-border-size) solid var(--mini-t-button-color);
+  border: calc(var(--mini-border-size) + 1px) solid var(--mini-t-button-color);
   background-color: transparent;
 }
 
@@ -141,7 +144,7 @@ button.outline {
 table {
   margin-top: 1rem;
   border-radius: var(--mini-border-radius);
-  border: var(--mini-border-size) solid var(--mini-color-text);
+  border: var(--mini-border-size) solid var(--mini-color-border-color);
   border-spacing: 0;
 }
 
@@ -155,7 +158,7 @@ table td {
 }
 
 table thead td {
-  border-bottom: var(--mini-border-size) solid var(--mini-color-text);
+  border-bottom: var(--mini-border-size) solid var(--mini-color-border-color);
   font-weight: bold;
 }
 
@@ -256,4 +259,44 @@ table tbody tr:hover td {
   .col-12 {
     grid-column: span 12;
   }
+}
+
+/* Forms */
+form.compact {
+  max-width: 560px;
+}
+
+label {
+  display: block;
+  font-size: calc(var(--mini-font-scale) * 0.75 * 1em);
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+input:not([type="submit"]),
+select,
+textarea {
+  border-radius: var(--mini-border-radius);
+  border: var(--mini-border-size) solid var(--mini-color-border-color);
+  background-color: var(--mini-color-element-background);
+  width: 100%;
+  font-size: 1em;
+  padding: 0.5rem;
+}
+
+input:not([type="submit"]):focus,
+select:focus,
+textarea:focus {
+  border-color: var(--mini-color-primary);
+}
+
+input:not([type="submit"]),
+select {
+  height: var(--mini-input-height);
+}
+
+textarea {
+  font-family: var(--mini-font-family);
+  font-size: calc(var(--mini-font-scale) * 0.75 * 1em);
+  resize: vertical;
 }

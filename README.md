@@ -1,3 +1,3 @@
-# mini.css
+# Menta
 
-A boilerplate CSS file.
+A fresh CSS starter

@@ -1,0 +1,27 @@
+{
+  "name": "menta.css",
+  "version": "0.1.0",
+  "description": "A fresh CSS starter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Angelmmiguel/menta.css.git"
+  },
+  "keywords": [
+    "CSS",
+    "CSS3",
+    "Boilerplate",
+    "Starter",
+    "UI",
+    "Kit"
+  ],
+  "author": "Angel M <hi@angel.kiwi>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Angelmmiguel/menta.css/issues"
+  },
+  "homepage": "https://github.com/Angelmmiguel/menta.css#readme"
+}
